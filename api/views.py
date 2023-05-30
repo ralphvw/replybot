@@ -16,7 +16,7 @@ def get_completion(prompt, model='gpt-3.5-turbo',temperature=0):
 
 @api_view(['POST'])
 def respond(request):
-    review = request.data.review
+    review = request.data.get('review', '')
     prompt = f"""
         You are a customer service AI assistant.
         Your task is to send an email reply to a valued customer.

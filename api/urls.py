@@ -1,6 +1,6 @@
 from django.urls import path
-import views
+from .views import respond
 
 urlpatterns = [
-    path('reviews/', views.respond, name='respond')
+    path('reviews/', respond, name='respond')
 ]
